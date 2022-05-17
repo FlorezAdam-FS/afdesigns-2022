@@ -1,0 +1,166 @@
+$accent: #e5eae5;
+$brighter-accent: #d3e6d3;
+$dark: #1b1b1c;
+
+.line {
+  width: 100%;
+  max-width: 1600px;
+  height: 2px;
+  background-color: $dark;
+  margin: 2rem auto;
+}
+
+.contact {
+  .intro {
+    h1 {
+      font-family: "Cerebri Sans";
+      font-weight: 700;
+      text-align: left;
+      width: 800px;
+    }
+    .social {
+      width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      a {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2rem;
+        color: $brighter-accent;
+        font-size: 1.2rem;
+        border: 1px solid $brighter-accent;
+        position: relative;
+        overflow: hidden;
+        &::before {
+          content: "";
+          transform-origin: bottom;
+          transition: all 400ms ease-in;
+          width: 100%;
+          transform: scaleY(0);
+          height: 100%;
+          position: absolute;
+          background-color: $brighter-accent;
+          z-index: -1;
+        }
+
+        &:hover::before {
+          transform: scaleY(1);
+        }
+      }
+    }
+  }
+
+  .contactForm {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+      height: 100%;
+      strong {
+        font-family: "Cerebri Sans";
+        font-weight: 300;
+        color: lightgray;
+        text-transform: uppercase;
+      }
+      p {
+        font-family: "Cerebri Sans";
+        line-height: 1.1;
+        font-size: 1.3rem;
+        margin-bottom: 4rem;
+        max-width: 330px;
+        font-weight: 300;
+
+        a {
+          transform-origin: left;
+          transition: all 1000ms ease-in;
+
+          &:hover {
+            color: red;
+          }
+        }
+      }
+    }
+    .right {
+      flex: 2;
+      strong {
+        font-family: "Cerebri Sans";
+        font-weight: 300;
+        color: rgb(196, 196, 196);
+        text-transform: uppercase;
+      }
+      form {
+        margin-top: 3rem;
+      }
+      .input {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+
+        strong {
+          margin-right: 1rem;
+          padding: 1.1rem 2rem 0 0;
+        }
+
+        div {
+          flex: 1;
+          font-size: 1.1rem;
+          input,
+          select {
+            border: 0;
+            border-bottom: 1px solid $accent;
+            width: 100%;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            line-height: 0.4;
+            transition: 300ms ease-in;
+            outline: none;
+            font-size: 2rem;
+            &:focus {
+              border-bottom: 1px solid $dark;
+            }
+          }
+        }
+      }
+      .buttonDiv {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        button {
+          background-color: transparent;
+          border: none;
+          font-family: "Cerebri Sans";
+          font-size: 4rem;
+          margin-top: 4rem;
+          cursor: pointer;
+          span {
+            transform-origin: left;
+            transition: 400ms ease-in;
+            color: black;
+            &:hover {
+              color: red;
+              margin-right: 4px;
+            }
+          }
+        }
+        span {
+          font-family: "Cerebri Sans";
+          font-size: 4rem;
+          margin-top: 4rem;
+          color: rgb(158, 216, 158);
+        }
+      }
+    }
+  }
+}

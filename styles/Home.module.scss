@@ -1,0 +1,232 @@
+$accent: #e5eae5;
+$brighter-accent: #d3e6d3;
+$dark: #1b1b1c;
+.line {
+  width: 100%;
+  max-width: 1600px;
+  height: 2px;
+  background-color: $dark;
+  margin: 2rem auto;
+}
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem;
+  .strong span {
+    font-family: "Cerebri Sans";
+    font-weight: 300;
+    color: $brighter-accent;
+    text-transform: uppercase;
+  }
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 100%;
+
+    p {
+      font-family: "Amiri";
+      line-height: 1.1;
+      font-size: 1.5rem;
+      margin-bottom: 4rem;
+      max-width: 330px;
+
+      a {
+        transform-origin: left;
+        transition: all 1000ms ease-in;
+
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+  .me {
+    height: 784px;
+    width: 500px;
+    flex: 1;
+    background: url("/me.png");
+    background-size: cover;
+    background-position: center 60px;
+    background-repeat: no-repeat;
+    background-color: $accent;
+    border-radius: 400px;
+    position: relative;
+
+    &::before {
+      content: "";
+      height: 824px;
+      width: 540px;
+      border-radius: 270px;
+      top: -20px;
+      left: -26px;
+      position: absolute;
+      border: 2px solid $accent;
+    }
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+  }
+}
+
+.employer {
+  text-align: center;
+
+  h3 {
+    font-family: "Cerebri Sans";
+    font-weight: 300;
+    color: lightgray;
+    text-transform: uppercase;
+  }
+  svg {
+    &:hover > g {
+      fill: $brighter-accent;
+    }
+  }
+}
+
+.knowledge {
+  padding: 4rem 0;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+
+  .categoryContainer {
+    transition: all 200ms ease-in;
+
+    &:hover > h3 {
+      color: $brighter-accent;
+    }
+
+    &:hover > .categories {
+      background-color: $brighter-accent;
+    }
+
+    .categories {
+      width: 100%;
+      min-width: 500px;
+      height: 250px;
+      border-radius: 10px;
+      overflow-x: scroll;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $accent;
+
+      .card {
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+
+      .item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 140px;
+        width: 100%;
+
+        .logoImage {
+          filter: grayscale(1);
+          transition: all 100ms ease-in;
+          padding: 0.1rem;
+          &:hover {
+            filter: grayscale(0);
+            animation: jump 600ms forwards;
+          }
+        }
+
+        p {
+          padding: 0;
+          margin: 0;
+          color: black;
+          font-family: "Amiri";
+          font-size: 1.3rem;
+          line-height: 1;
+        }
+      }
+    }
+  }
+}
+
+.link {
+  height: 400px;
+  width: 400px;
+  font-family: "Cerebri Sans";
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  h3 {
+    color: $dark;
+    text-align: right;
+    font-size: 2rem;
+  }
+
+  &:nth-child(1) {
+    background-color: $accent;
+
+    &:hover {
+      filter: contrast(0.9);
+    }
+  }
+  &:nth-child(2) {
+    background-color: $brighter-accent;
+  }
+  &:nth-child(3) {
+    background-color: $dark;
+    h3 {
+      color: $accent;
+    }
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(10px);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(6px);
+  }
+  80% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate3d(0, 0, 20px);
+  }
+  100% {
+    transform: rotate3d(0, 0, 0px);
+  }
+}

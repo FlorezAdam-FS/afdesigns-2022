@@ -1,0 +1,84 @@
+.nav {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    li {
+      font-family: "Cerebri Sans";
+      font-size: 1.1rem;
+      font-weight: 400;
+      position: relative;
+      display: flex;
+      align-items: center;
+      &::before {
+        content: "";
+        transform-origin: left;
+        transition: all 400ms ease-in;
+        width: 60%;
+        left: 20%;
+        transform: scaleX(0);
+        height: 10%;
+        bottom: 35%;
+        position: absolute;
+        background-color: red;
+        z-index: -1;
+      }
+
+      &:hover::before {
+        transform: scaleX(1);
+      }
+
+      &:first-child {
+        padding: 25px;
+      }
+      &:not(:first-child) {
+        padding: 25px;
+      }
+    }
+  }
+  .logo {
+    font-family: "Yellowtail";
+    font-size: 4rem;
+    margin-top: -2rem;
+    padding: 0;
+  }
+  .social {
+    font-size: 1.8rem;
+
+    display: flex;
+    align-items: center;
+    a {
+      margin-left: 1.5625rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &::before {
+        content: "";
+        transform-origin: left;
+        transition: all 400ms ease-in;
+        width: 100%;
+        left: 0;
+        transform: scaleX(0);
+        height: 100%;
+        bottom: 0%;
+        position: absolute;
+        background-color: red;
+        z-index: -1;
+      }
+
+      &:hover::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+}

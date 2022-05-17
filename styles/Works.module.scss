@@ -1,0 +1,70 @@
+$accent: #e5eae5;
+$brighter-accent: #d3e6d3;
+$dark: #1b1b1c;
+
+.works {
+  h1 {
+    font-family: "Cerebri Sans";
+    font-weight: 700;
+    text-align: left;
+  }
+  label {
+    margin-right: 3rem;
+    text-transform: uppercase;
+    font-family: "Cerebri Sans";
+    font-weight: 300;
+  }
+
+  .grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .gridItem {
+      position: relative;
+      width: 700px;
+      justify-content: space-between;
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 8rem;
+
+      .gridItemImage {
+        width: 700px;
+        height: 700px;
+        position: relative;
+        overflow: hidden;
+        img {
+          transition: 700ms all ease-in;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      strong {
+        font-weight: 300;
+        font-family: "Cerebri Sans";
+        color: #666;
+        margin-top: 2.5rem;
+        margin-bottom: -0.5rem;
+        font-size: 0.8rem;
+        letter-spacing: 1.2px;
+      }
+
+      h3 {
+        font-size: 3rem;
+        line-height: 0.1;
+      }
+    }
+  }
+}
+
+.line {
+  width: 100%;
+  max-width: 1600px;
+  height: 2px;
+  background-color: $dark;
+  margin: 2rem auto;
+}
