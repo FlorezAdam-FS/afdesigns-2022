@@ -1,6 +1,5 @@
-$accent: #e5eae5;
-$brighter-accent: #d3e6d3;
-$dark: #1b1b1c;
+@import "variables";
+
 .line {
   width: 100%;
   max-width: 1600px;
@@ -8,195 +7,256 @@ $dark: #1b1b1c;
   background-color: $dark;
   margin: 2rem auto;
 }
-.details {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 4rem;
-  .strong span {
-    font-family: "Cerebri Sans";
-    font-weight: 300;
-    color: $brighter-accent;
-    text-transform: uppercase;
+.container {
+  width: 100%;
+  @media screen and(max-width: $s) {
+    section {
+      padding: 2rem 0;
+    }
+    h1 {
+      font-size: 3.4rem;
+      padding: 1rem;
+    }
+    .heading {
+      font-size: 3rem;
+    }
   }
-  .left {
-    flex: 1;
+  .details {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
-    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem;
+    @media screen and (max-width: $s) {
+      padding: 2rem;
+      justify-content: center;
+    }
+    .strong span {
+      font-family: "Cerebri Sans";
+      font-weight: 300;
+      color: $brighter-accent;
+      text-transform: uppercase;
+    }
+    @media screen and (max-width: $xl) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "me me" "info number";
+      gap: 3rem;
+    }
 
-    p {
-      font-family: "Amiri";
-      line-height: 1.1;
-      font-size: 1.5rem;
-      margin-bottom: 4rem;
-      max-width: 330px;
+    @media screen and (max-width: $s) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: "me" "info" "number";
+      gap: 3rem;
+    }
 
-      a {
-        transform-origin: left;
-        transition: all 1000ms ease-in;
+    .left {
+      grid-area: info;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+      height: 100%;
 
-        &:hover {
-          color: red;
+      p {
+        font-family: "Amiri";
+        line-height: 1.1;
+        font-size: 1.5rem;
+        margin-bottom: 4rem;
+        max-width: 330px;
+
+        a {
+          transform-origin: left;
+          transition: all 1000ms ease-in;
+
+          &:hover {
+            color: $brighter-accent;
+          }
         }
       }
     }
-  }
-  .me {
-    height: 784px;
-    width: 500px;
-    flex: 1;
-    background: url("/me.png");
-    background-size: cover;
-    background-position: center 60px;
-    background-repeat: no-repeat;
-    background-color: $accent;
-    border-radius: 400px;
-    position: relative;
-
-    &::before {
-      content: "";
-      height: 824px;
-      width: 540px;
-      border-radius: 270px;
-      top: -20px;
-      left: -26px;
-      position: absolute;
-      border: 2px solid $accent;
-    }
-  }
-
-  .right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-around;
-  }
-}
-
-.employer {
-  text-align: center;
-
-  h3 {
-    font-family: "Cerebri Sans";
-    font-weight: 300;
-    color: lightgray;
-    text-transform: uppercase;
-  }
-  svg {
-    &:hover > g {
-      fill: $brighter-accent;
-    }
-  }
-}
-
-.knowledge {
-  padding: 4rem 0;
-}
-
-.row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 0;
-
-  .categoryContainer {
-    transition: all 200ms ease-in;
-
-    &:hover > h3 {
-      color: $brighter-accent;
-    }
-
-    &:hover > .categories {
-      background-color: $brighter-accent;
-    }
-
-    .categories {
-      width: 100%;
-      min-width: 500px;
-      height: 250px;
-      border-radius: 10px;
-      overflow-x: scroll;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .me {
+      grid-area: me;
+      // height: 784px;
+      max-width: 500px;
+      width: 90%;
+      flex: 1;
+      aspect-ratio: 1/2;
+      min-width: 360px;
+      background: url("/me.png");
+      background-size: cover;
+      background-position: center 60px;
+      background-repeat: no-repeat;
       background-color: $accent;
+      border-radius: 400px;
+      position: relative;
+      @media screen and (max-width: $xl) {
+        margin: 0 auto;
+      }
+      &::before {
+        content: "";
+        height: 104%;
+        width: 110%;
+        border-radius: 270px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        border: 2px solid $accent;
+      }
+    }
 
-      .card {
-        width: 150px;
+    .right {
+      grid-area: number;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-around;
+    }
+  }
+
+  .employer {
+    text-align: center;
+
+    h3 {
+      font-family: "Cerebri Sans";
+      font-weight: 300;
+      color: lightgray;
+      text-transform: uppercase;
+    }
+    svg {
+      &:hover > g {
+        fill: $brighter-accent;
+      }
+    }
+  }
+
+  .knowledge {
+    padding: 4rem 0;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0;
+
+    .categoryContainer {
+      transition: all 200ms ease-in;
+      margin: 0 auto;
+      max-width: max-content;
+      padding: 1rem;
+      h3 {
+        font-family: "Cerebri Sans";
+        font-weight: 400;
+      }
+      &:hover > h3 {
+        color: $brighter-accent;
+      }
+
+      &:hover > .categories {
+        background-color: $brighter-accent;
+      }
+
+      .categories {
+        width: 100%;
+        max-width: max-content;
+        border-radius: 10px;
+        margin: 0 auto;
+        overflow-x: scroll;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 1rem;
-      }
+        flex-wrap: wrap;
+        background-color: $accent;
 
-      .item {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        height: 140px;
-        width: 100%;
+        .card {
+          width: 150px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 1rem;
+        }
 
-        .logoImage {
-          filter: grayscale(1);
-          transition: all 100ms ease-in;
-          padding: 0.1rem;
-          &:hover {
-            filter: grayscale(0);
-            animation: jump 600ms forwards;
+        .item {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          height: 140px;
+          width: 100%;
+
+          .logoImage {
+            filter: grayscale(1);
+            transition: all 100ms ease-in;
+            padding: 0.1rem;
+            &:hover {
+              filter: grayscale(0);
+              animation: jump 600ms forwards;
+            }
+          }
+
+          p {
+            padding: 0;
+            margin: 0;
+            color: black;
+            font-family: "Amiri";
+            font-size: 1.3rem;
+            line-height: 1;
           }
         }
-
-        p {
-          padding: 0;
-          margin: 0;
-          color: black;
-          font-family: "Amiri";
-          font-size: 1.3rem;
-          line-height: 1;
-        }
       }
     }
   }
-}
 
-.link {
-  height: 400px;
-  width: 400px;
-  font-family: "Cerebri Sans";
-  border-radius: 10px;
-  padding: 2rem;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  .link {
+    height: 400px;
+    width: 400px;
+    font-family: "Cerebri Sans";
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 
-  h3 {
-    color: $dark;
-    text-align: right;
-    font-size: 2rem;
-  }
+    h3 {
+      color: $dark;
+      text-align: right;
+      font-size: 2rem;
+    }
 
-  &:nth-child(1) {
-    background-color: $accent;
+    &:nth-child(1) {
+      background-color: $accent;
 
-    &:hover {
-      filter: contrast(0.9);
+      &:hover {
+        filter: contrast(0.9);
+      }
+    }
+    &:nth-child(2) {
+      background-color: $brighter-accent;
+    }
+    &:nth-child(3) {
+      background-color: $dark;
+      h3 {
+        color: $accent;
+      }
     }
   }
-  &:nth-child(2) {
-    background-color: $brighter-accent;
-  }
-  &:nth-child(3) {
-    background-color: $dark;
-    h3 {
-      color: $accent;
+
+  .recentPosts {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    h2 {
+      width: 80%;
+      line-height: 1.1;
     }
   }
 }

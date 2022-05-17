@@ -1,0 +1,22 @@
+@import "variables";
+
+.footer {
+  background: $dark;
+  cursor: url("../assets/images/Asset 11.png"), auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  a {
+    font-size: 2rem;
+    margin: 0 1rem;
+    svg {
+      fill: $accent !important;
+      transition: 300ms ease-in;
+      &:hover {
+        fill: rgb(185, 218, 185) !important;
+      }
+    }
+  }
+}

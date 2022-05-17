@@ -29,16 +29,16 @@ const Nav = () => {
 
       <div className={styles.social}>
         <a href="https://github.com/FlorezAdam-FS">
-          <AiFillGithub />
+          <AiFillGithub className={styles.socialItem} />
         </a>
         <a href="https://www.linkedin.com/in/adamflorez/">
-          <AiFillLinkedin />
+          <AiFillLinkedin className={styles.socialItem} />
         </a>
         <a href="https://instagram.com/adamflorezdesigns">
-          <AiOutlineInstagram />
+          <AiOutlineInstagram className={styles.socialItem} />
         </a>
         <a href="https://www.facebook.com/adam.florez.754">
-          <FaFacebookF />
+          <FaFacebookF className={styles.socialItem} />
         </a>
       </div>
     </div>

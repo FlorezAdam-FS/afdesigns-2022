@@ -1,0 +1,20 @@
+.cursorMain {
+  cursor: url("../assets/images/Asset\ 11.png");
+  z-index: 1000000;
+}
+
+.cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  border: 2px solid black;
+  left: 0;
+}
+
+.large {
+  height: 70px;
+  width: 70px;
+}

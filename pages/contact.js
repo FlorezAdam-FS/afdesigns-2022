@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Nav from "../components/Nav";
 import styles from "../styles/Contact.module.scss";
 import {
   AiFillGithub,
@@ -56,8 +55,7 @@ function Contact() {
 
   return (
     <div className={styles.contact}>
-      <Nav />
-      <Parallax speed={-10}>
+      <Parallax speed={-3}>
         <section className={styles.intro}>
           <h1>Let&apos;s get you an estimate.</h1>
           <div className={styles.social}>
@@ -78,17 +76,23 @@ function Contact() {
       </Parallax>
       <section className={styles.contactForm}>
         <div className={styles.left}>
-          <strong>Address</strong>
-          <p>507 Pinnacle cove Blvd Orlando FL, 32824 United States</p>
-          <strong>Email</strong>
-          <p className={styles.contact}>
-            <a target="blank" href="mailto: adamseanflorez@gmail.com">
-              adamseanflorez@gmail.com
-            </a>
-          </p>
-
-          <strong>Phone</strong>
-          <p>407-932-8226</p>
+          <div>
+            <strong>Address</strong>
+            <p>507 Pinnacle cove Blvd Orlando FL, 32824 United States</p>
+          </div>
+          <div>
+            <strong>Email</strong>
+            <p className={styles.contact}>
+              <a target="blank" href="mailto: adamseanflorez@gmail.com">
+                adamseanflorez@gmail.com
+              </a>
+            </p>
+          </div>
+          <div>
+            {" "}
+            <strong>Phone</strong>
+            <p>407-932-8226</p>
+          </div>
         </div>
         <div className={styles.right}>
           <strong>TELL US ABOUT YOUR PROJECT AND GOALS.</strong>

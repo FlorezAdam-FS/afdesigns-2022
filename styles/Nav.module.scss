@@ -1,8 +1,13 @@
+@import "variables";
+
 .nav {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
   padding: 3rem;
+  @media screen and (max-width: $s) {
+    padding: 2rem 1rem 1rem;
+  }
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,7 +34,7 @@
         height: 10%;
         bottom: 35%;
         position: absolute;
-        background-color: red;
+        background-color: $brighter-accent;
         z-index: -1;
       }
 
@@ -39,6 +44,9 @@
 
       &:first-child {
         padding: 25px;
+        @media screen and (max-width: $s) {
+          padding: 0;
+        }
       }
       &:not(:first-child) {
         padding: 25px;
@@ -54,9 +62,15 @@
   .social {
     font-size: 1.8rem;
 
+    @media screen and (max-width: $s) {
+      display: none;
+    }
     display: flex;
     align-items: center;
     a {
+      padding: 0.2rem;
+      border-radius: 50%;
+      overflow: hidden;
       margin-left: 1.5625rem;
       position: relative;
       display: flex;
@@ -72,7 +86,7 @@
         height: 100%;
         bottom: 0%;
         position: absolute;
-        background-color: red;
+        background-color: $brighter-accent;
         z-index: -1;
       }
 

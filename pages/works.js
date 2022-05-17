@@ -1,5 +1,4 @@
 import React from "react";
-import Nav from "../components/Nav";
 import Image from "next/image";
 import styles from "../styles/Works.module.scss";
 
@@ -11,7 +10,6 @@ const works = () => {
 
   return (
     <div className={styles.works}>
-      <Nav />
       <section>
         <h1>Portfolio</h1>
         <div className={styles.line}></div>

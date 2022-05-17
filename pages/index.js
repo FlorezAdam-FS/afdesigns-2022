@@ -1,5 +1,4 @@
 import styles from "../styles/Home.module.scss";
-import Nav from "../components/Nav";
 import { Design, FrontEnd, BackEnd } from "../data/skills";
 import Image from "next/image";
 import { Parallax } from "react-scroll-parallax";
@@ -8,7 +7,6 @@ import Fade from "react-reveal/Fade";
 export default function Home({ content }) {
   return (
     <div className={styles.container}>
-      <Nav />
       <Parallax speed={-10}>
         <section>
           <Fade opposite delay={200} duration={1000}>
@@ -88,7 +86,7 @@ export default function Home({ content }) {
       </Parallax>
       <div className={styles.line}></div>
       <section className={styles.knowledge}>
-        <h2>My Knowledge</h2>
+        <h2 className={styles.heading}>My Knowledge</h2>
         <div className={styles.row}>
           <div className={styles.categoryContainer}>
             <h3>Design</h3>
@@ -159,7 +157,7 @@ export default function Home({ content }) {
       </section>
       <div className={styles.line}></div>
       <section className={styles.recentPosts}>
-        <h2>Recent Posts on Medium</h2>
+        <h2 className={styles.heading}>Recent Posts on Medium</h2>
         <div className={styles.row}>
           {content.map((item) => (
             <a
