@@ -162,6 +162,9 @@ export default function Home({ content }) {
           {content.map((item) => (
             <a
               target="blank"
+              style={{
+                background: `linear-gradient(#00000040, #00000040),url(${item.thumbnail}) center center / cover no-repeat`,
+              }}
               key={item.link}
               href={item.link}
               className={styles.link}
@@ -176,11 +179,13 @@ export default function Home({ content }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(
-    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@adamseanflorez"
-  );
+  const username = "adamseanflorez";
+  const RSSURL = `https://medium.com/feed/@${username}`;
+  const RSSConverter = `https://api.rss2json.com/v1/api.json?rss_url=${RSSURL}`;
+  const res = await fetch(RSSConverter);
   const data = await res.json();
   const items = data.items;
+  console.log(data);
 
   return {
     props: {
