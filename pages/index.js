@@ -163,7 +163,7 @@ export default function Home({ content }) {
             <a
               target="blank"
               style={{
-                background: `linear-gradient(#00000040, #00000040),url(${item.thumbnail}) center center / cover no-repeat`,
+                background: `linear-gradient(#00000060, #00000060),url(${item.thumbnail}) center center / cover no-repeat`,
               }}
               key={item.link}
               href={item.link}

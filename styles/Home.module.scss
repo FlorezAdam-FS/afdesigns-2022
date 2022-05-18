@@ -213,41 +213,6 @@
     }
   }
 
-  .link {
-    height: 400px;
-    width: 400px;
-    font-family: "Cerebri Sans";
-    border-radius: 10px;
-    padding: 2rem;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    margin: 1rem;
-    transform-origin: center;
-    transition: 300ms ease-in;
-    &:hover {
-      transform: scale(1.1);
-    }
-    &:hover > h3 {
-      color: $brighter-accent;
-    }
-    h3 {
-      color: $accent;
-      text-align: right;
-      font-size: 2rem;
-    }
-
-    &:nth-child(1) {
-      background-color: $accent;
-    }
-    &:nth-child(2) {
-      background-color: $brighter-accent;
-    }
-    &:nth-child(3) {
-      background-color: $dark;
-    }
-  }
-
   .recentPosts {
     text-align: center;
     display: flex;
@@ -258,6 +223,44 @@
     h2 {
       width: 80%;
       line-height: 1.1;
+    }
+    .row {
+      gap: 2rem;
+    }
+
+    .link {
+      height: 400px;
+      width: 400px;
+      margin: 1rem auto;
+      font-family: "Cerebri Sans";
+      border-radius: 10px;
+      padding: 2rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      transform-origin: center;
+      transition: 300ms ease-in;
+      &:hover {
+        transform: scale(1.1);
+      }
+      &:hover > h3 {
+        color: $brighter-accent;
+      }
+      h3 {
+        color: white;
+        text-align: right;
+        font-size: 2rem;
+      }
+
+      &:nth-child(1) {
+        background-color: $accent;
+      }
+      &:nth-child(2) {
+        background-color: $brighter-accent;
+      }
+      &:nth-child(3) {
+        background-color: $dark;
+      }
     }
   }
 }
