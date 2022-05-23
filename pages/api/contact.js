@@ -36,12 +36,12 @@ export default function Contact(req, res) {
     text: "Thank you for the message!",
     html: `
     <div>
-      <h1>Wow! Thank you</h1>
-      <p>I appreciate you taking the time to reach out. I will contact you as soon as I read your message. If you have any other questions please reach out to me on my social media. You can find the links on my website at <a href="https://www.adamflorezdesigns.com">adamflorezdesigns.com</a></p>
+      <h1>Thank you!</h1>
+      <p>I appreciate you taking the time to reach out about your project: "${req.body.project}". I will contact you as soon as I read your message. If you have any other questions please reach out to me on my social media. You can find the links on my website at <a href="https://www.adamflorezdesigns.com">adamflorezdesigns.com</a></p>
       <br/>
       <br/>
       <br/>
-      <p>I'll Talk to you soon,</p>
+      <p>I'll talk to you soon,</p>
       <p>Adam Florez.</p>
     </div>
     `,

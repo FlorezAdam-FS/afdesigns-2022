@@ -9,6 +9,9 @@
 }
 .container {
   width: 100%;
+  h1 {
+    animation: text-focus-in 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  }
   @media screen and(max-width: $s) {
     section {
       padding: 2rem 0;
@@ -17,6 +20,7 @@
       font-size: 3.4rem;
       padding: 1rem;
     }
+
     .heading {
       font-size: 3rem;
     }
@@ -119,16 +123,39 @@
 
   .employer {
     text-align: center;
+    .row {
+      padding: 1rem 0;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 700px;
+      width: 90%;
+      margin: 0 auto;
+      @media screen and (max-width: $m) {
+        flex-direction: column;
+      }
 
+      span {
+        font-size: 30px;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media screen and (max-width: $m) {
+          padding-bottom: 32px;
+        }
+      }
+    }
     h3 {
       font-family: "Cerebri Sans";
       font-weight: 300;
       color: lightgray;
       text-transform: uppercase;
     }
+
     svg {
-      &:hover > g {
-        fill: $brighter-accent;
+      &:hover {
+        fill: $brighter-accent !important;
       }
     }
   }
@@ -292,5 +319,16 @@
   }
   100% {
     transform: rotate3d(0, 0, 0px);
+  }
+}
+
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
   }
 }
