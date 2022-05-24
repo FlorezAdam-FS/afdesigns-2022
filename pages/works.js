@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../styles/Works.module.scss";
+import { Projects } from "../data/projects";
+import { AiFillGithub, AiFillHome } from "react-icons/ai";
 
 const works = () => {
   const Filter = (e) => {
@@ -16,27 +18,38 @@ const works = () => {
       </section>
       <section>
         <div className={styles.grid}>
-          <div data-type="development" className={styles.gridItem}>
-            <div className={styles.gridItemImage}>
-              <a
-                href="https://afdesignsmusicplayer.netlify.app/"
-                target="blank"
-              >
-                <Image src="/music.jpeg" layout="fill" alt="music" />
-              </a>
+          {Projects.map((project) => (
+            <div key={project.name} className={styles.gridItem}>
+              <div className={styles.gridItemImage}>
+                <Image
+                  src={project.image}
+                  layout="fill"
+                  alt={project.name}
+                  priority={true}
+                />
+              </div>
+              <strong>{project.topic}</strong>
+              <p className={styles.gridItemDesc}>{project.desc}</p>
+              <div className={styles.row}>
+                <div className={styles.languages}>
+                  {project.languages.map((l) => (
+                    <span key={l} className={styles.language}>
+                      {l}
+                    </span>
+                  ))}
+                </div>
+                <div className={styles.links}>
+                  <a href={project.githubLink} target="blank">
+                    <AiFillGithub />
+                  </a>
+                  <a href={project.webLink} target="blank">
+                    <AiFillHome />
+                  </a>
+                </div>
+              </div>
+              <h3>{project.name}</h3>
             </div>
-            <strong>DEVELOPMENT</strong>
-            <h3>Music Player</h3>
-          </div>
-          <div data-type="development" className={styles.gridItem}>
-            <div className={styles.gridItemImage}>
-              <a href="https://florezadam-fs.github.io/WD5/#/" target="blank">
-                <Image src="/news.jpeg" layout="fill" alt="news" />
-              </a>
-            </div>
-            <strong>DEVELOPMENT</strong>
-            <h3>News App</h3>
-          </div>
+          ))}
         </div>
       </section>
     </div>

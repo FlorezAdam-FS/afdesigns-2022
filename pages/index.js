@@ -48,7 +48,6 @@ export default function Home({ content }) {
         </div>
 
         <div className={styles.me}></div>
-
         <div className={styles.right}>
           <Fade opposite cascade>
             <div className={styles.strong}>Years Of Experience</div>

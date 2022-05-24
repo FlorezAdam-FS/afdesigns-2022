@@ -56,9 +56,21 @@
   .logo {
     font-family: "Yellowtail";
     font-size: 4rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 12rem;
+    transition: 400ms all ease-in;
+    transform-origin: left left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: -2rem;
     padding: 0;
     position: relative;
+
+    &:hover {
+      background-color: $brighter-accent;
+    }
   }
   .social {
     font-size: 1.8rem;
