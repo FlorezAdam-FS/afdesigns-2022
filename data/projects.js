@@ -1,0 +1,38 @@
+export const Projects = [
+  {
+    topic: "Development",
+    name: "Music Player",
+    image: "/musicPlayer.png",
+    desc: "Using Vanilla JavaScript I was able to develop a music player with static data of some of my favorite songs.",
+    languages: ["HTML", "CSS", "JavaScript"],
+    githubLink: "https://github.com/FlorezAdam-FS/MusicPlayer",
+    webLink: "https://afdesignsmusicplayer.netlify.app/",
+  },
+  {
+    topic: "Development",
+    name: "News App",
+    image: "/news.png",
+    desc: "Developed Reactjs application accessing free News API. Fetched data from search input and showed top stories on specified keywords",
+    languages: ["Reactjs", "CSS", "JSX"],
+    githubLink: "https://github.com/FlorezAdam-FS/WD5",
+    webLink: "https://florezadam-fs.github.io/WD5/#/",
+  },
+  {
+    topic: "Development",
+    name: "Crypto Currency Tracker",
+    image: "/crypto.png",
+    desc: "Real-time crypto tracker with filtered search where it filters as you type. Using CoinGecko API",
+    languages: ["Reactjs", "CSS"],
+    githubLink: "https://github.com/FlorezAdam-FS/CryptoCurrencyTracker",
+    webLink: "https://afdesignscryptotracker.netlify.app/",
+  },
+  {
+    topic: "Development",
+    name: "Record Lift",
+    image: "/weights.png",
+    desc: "Workout application using ExerciseDB, this API provides images and workouts and add the workouts to a planner for the day. You can then add weight, reps and sets of each workout. Using Vanilla JavaScript I was able to create a fully functioning website.",
+    languages: ["HTML", "CSS", "JavaScript"],
+    githubLink: "https://github.com/FlorezAdam-FS/FlorezAdam-FS.github.io",
+    webLink: "https://florezadam-fs.github.io/",
+  },
+];
