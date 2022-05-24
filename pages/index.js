@@ -21,33 +21,43 @@ export default function Home({ content }) {
       <section className={styles.details}>
         <div className={styles.left}>
           <Fade opposite cascade>
-            <div className={styles.strong}>Biography</div>
-            <p>
-              Recent Graduate but always learning! I&apos;m Adam, Looking to
-              make a difference in web development and design.
-            </p>
-            <div className={styles.strong}>Contact</div>
-            <p className={styles.contact}>
-              Adam Florez
-              <br />
-              <a target="blank" href="mailto: adamseanflorez@gmail.com">
-                adamseanflorez@gmail.com
-              </a>
-              <br />
-              407-932-8226
-            </p>
+            <div className={styles.strong}>
+              <span>Biography</span>
+              <p>
+                Freelance Web Developer based in Orlando Florida. Looking to
+                develop websites for clients directly or work with businesses to
+                assist with their projects. One stop shop for web development
+                and design.
+              </p>
+            </div>
 
-            <div className={styles.strong}>Services</div>
-            <p>
-              Web Development
-              <br />
-              Web Design <br />
-              Web Animations
-            </p>
+            <div className={styles.strong}>
+              <span>Contact</span>
+              <p className={styles.contact}>
+                Adam Florez
+                <br />
+                <a target="blank" href="mailto: adamseanflorez@gmail.com">
+                  adamseanflorez@gmail.com
+                </a>
+                <br />
+                407-932-8226
+              </p>
+            </div>
+
+            <div className={styles.strong}>
+              <span>Services</span>
+              <p>
+                Web Development
+                <br />
+                Web Design <br />
+                Web Animations
+              </p>
+            </div>
           </Fade>
         </div>
 
         <div className={styles.me}></div>
+
         <div className={styles.right}>
           <Fade opposite cascade>
             <div className={styles.strong}>Years Of Experience</div>
