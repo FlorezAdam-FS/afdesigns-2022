@@ -181,7 +181,6 @@ export async function getStaticProps() {
   const res = await fetch(RSSConverter);
   const data = await res.json();
   const items = data.items;
-  console.log(data);
 
   return {
     props: {
