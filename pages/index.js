@@ -190,7 +190,7 @@ export async function getStaticProps() {
   const RSSConverter = `https://api.rss2json.com/v1/api.json?rss_url=${RSSURL}`;
   const res = await fetch(RSSConverter);
   const data = await res.json();
-  const items = data.items;
+  const items = data.items.slice(0, 3);
 
   return {
     props: {
