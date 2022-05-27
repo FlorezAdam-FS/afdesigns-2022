@@ -37,7 +37,7 @@ export default function Home({ content }) {
                 Adam Florez
                 <br />
                 <a target="blank" href="mailto: adamseanflorez@gmail.com">
-                  adamseanflorez@gmail.com
+                  adam@adamflorezdesigns.com
                 </a>
                 <br />
                 407-932-8226

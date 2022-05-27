@@ -83,8 +83,8 @@ function Contact() {
           <div>
             <strong>Email</strong>
             <p className={styles.contact}>
-              <a target="blank" href="mailto: adamseanflorez@gmail.com">
-                adamseanflorez@gmail.com
+              <a target="blank" href="mailto: adam@adamflorezdesigns.com">
+                adam@adamflorezdesigns.com
               </a>
             </p>
           </div>
