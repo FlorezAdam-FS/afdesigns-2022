@@ -3,7 +3,6 @@ import { Design, FrontEnd, BackEnd } from "../data/skills";
 import Image from "next/image";
 import { Parallax } from "react-scroll-parallax";
 import Fade from "react-reveal/Fade";
-
 export default function Home({ content }) {
   return (
     <div className={styles.container}>
@@ -76,7 +75,7 @@ export default function Home({ content }) {
           <h3>Current Employer</h3>
           <div className={styles.row}>
             <a href="https://www.adventhealth.com">
-              <Image
+              <img
                 width={300}
                 height={105}
                 src="/adventhealth.svg"
@@ -85,7 +84,7 @@ export default function Home({ content }) {
             </a>
             <span>+</span>
             <a href="https://www.pushhere.com">
-              <Image width={120} height={105} src="/push.svg" alt="push" />
+              <img width={120} height={105} src="/push.svg" alt="push" />
             </a>
           </div>
         </section>

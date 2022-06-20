@@ -3,7 +3,6 @@ import Image from "next/image";
 import styles from "../styles/Works.module.scss";
 import { Projects } from "../data/projects";
 import { AiFillGithub, AiFillHome } from "react-icons/ai";
-
 const works = () => {
   const Filter = (e) => {
     const item = e.target.innerHTML.toLowerCase();
@@ -18,15 +17,17 @@ const works = () => {
       </section>
       <section>
         <div className={styles.grid}>
-          {Projects.map((project) => (
+          {[...Projects].reverse().map((project) => (
             <div key={project.name} className={styles.gridItem}>
               <div className={styles.gridItemImage}>
-                <Image
-                  src={project.image}
-                  layout="fill"
-                  alt={project.name}
-                  priority={true}
-                />
+                <a href={project.webLink}>
+                  <Image
+                    src={project.image}
+                    layout="fill"
+                    alt={project.name}
+                    priority={true}
+                  />
+                </a>
               </div>
               <strong>{project.topic}</strong>
               <p className={styles.gridItemDesc}>{project.desc}</p>
@@ -39,9 +40,12 @@ const works = () => {
                   ))}
                 </div>
                 <div className={styles.links}>
-                  <a href={project.githubLink} target="blank">
-                    <AiFillGithub />
-                  </a>
+                  {project.githubLink && (
+                    <a href={project.githubLink} target="blank">
+                      <AiFillGithub />
+                    </a>
+                  )}
+
                   <a href={project.webLink} target="blank">
                     <AiFillHome />
                   </a>

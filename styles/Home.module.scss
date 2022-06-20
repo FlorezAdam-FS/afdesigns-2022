@@ -152,10 +152,15 @@
       color: lightgray;
       text-transform: uppercase;
     }
-
-    svg {
+    img {
+      filter: invert(100%) sepia(7%) saturate(957%) hue-rotate(47deg)
+        brightness(93%) contrast(97%);
+      transition: all 100ms ease-in;
       &:hover {
-        fill: $brighter-accent !important;
+        transition: all 100ms ease-in;
+
+        filter: invert(95%) sepia(16%) saturate(230%) hue-rotate(59deg)
+          brightness(95%) contrast(89%);
       }
     }
   }

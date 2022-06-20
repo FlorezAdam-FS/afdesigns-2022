@@ -35,4 +35,12 @@ export const Projects = [
     githubLink: "https://github.com/FlorezAdam-FS/FlorezAdam-FS.github.io",
     webLink: "https://florezadam-fs.github.io/",
   },
+  {
+    topic: "Development",
+    name: "BBQ Bowls for Sonny's BBQ",
+    image: "/food.png",
+    desc: "Developed Front end website for sonnys bbq, used libraries like AOS (animate on scroll), and parallax. Used a lot of animation and created a website thats in production on their page. Unable to show code but I have the website link. Also learned Vue and Wordpress during this project.",
+    languages: ["Vue", "WordPress"],
+    webLink: "https://www.sonnysbbq.com/bbq-bowls",
+  },
 ];
