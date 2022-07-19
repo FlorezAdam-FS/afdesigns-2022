@@ -4,7 +4,7 @@
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 1.8rem 3rem;
   @media screen and (max-width: $s) {
     padding: 2rem 1rem 1rem;
   }
@@ -64,8 +64,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -2rem;
+    margin-top: -1rem;
+
     padding: 0;
+    padding-bottom: 1rem;
     position: relative;
 
     &:hover {
@@ -84,7 +86,7 @@
       padding: 0.2rem;
       border-radius: 50%;
       overflow: hidden;
-      margin-left: 1.5625rem;
+      margin-left: 3.8rem;
       position: relative;
       display: flex;
       align-items: center;
@@ -100,6 +102,58 @@
         bottom: 0%;
         position: absolute;
         background-color: $brighter-accent;
+        z-index: -1;
+      }
+
+      &:hover::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+.services {
+  position: relative;
+
+  .hiddenNav {
+    position: absolute;
+    left: 105%;
+    transform: translateX(-50%);
+    top: 80%;
+    display: flex;
+    flex-direction: column;
+    background: $brighter-accent;
+    padding: 2rem;
+    z-index: 1000;
+    width: max-content;
+    &::before {
+      content: "";
+      height: 20px;
+      width: 20px;
+      transform: rotate(45deg);
+      background: $brighter-accent;
+      border-radius: 0.3rem;
+      position: absolute;
+      top: -3%;
+      z-index: -100;
+    }
+
+    a {
+      margin-bottom: 1rem;
+      position: relative;
+      &:last-child {
+        margin-bottom: 0rem;
+      }
+      &::before {
+        content: "";
+        transform-origin: left;
+        transition: all 400ms ease-in;
+        width: 50px;
+        left: 0;
+        transform: scaleX(0);
+        height: 10px;
+        bottom: 0%;
+        position: absolute;
+        background-color: white;
         z-index: -1;
       }
 

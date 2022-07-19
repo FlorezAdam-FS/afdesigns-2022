@@ -1,20 +1,26 @@
-.cursorMain {
-  cursor: url("../assets/images/Asset\ 1.png");
-  z-index: 1000000;
-}
-
+@import './variables.scss';
 .cursor {
-  position: fixed;
-  width: 40px;
-  height: 40px;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
+  position: absolute;
+  background-color: #333;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  z-index: 1;
+  user-select: none;
   pointer-events: none;
-  border: 2px solid black;
-  left: 0;
+  z-index: 10000;
 }
 
-.large {
-  height: 70px;
-  width: 70px;
+.cursorFollower {
+  position: absolute;
+  background-color: $brighter-accent;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  z-index: 1;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.5;
+  z-index: 10000;
+  transform: translate(5px, 5px);
 }

@@ -1,4 +1,5 @@
 import styles from "../styles/Home.module.scss";
+import Head from "next/Head";
 import { Design, FrontEnd, BackEnd } from "../data/skills";
 import Image from "next/image";
 import { Parallax } from "react-scroll-parallax";
@@ -6,14 +7,18 @@ import Fade from "react-reveal/Fade";
 export default function Home({ content }) {
   return (
     <div className={styles.container}>
+      <Head>
+        <title>af. designs | Orlando Creative Developer</title>
+        <meta />
+      </Head>
       <Parallax speed={-10}>
         <section className={styles.head}>
           <h1>
-            Adam Florez
+            Af. Designs
             <br />
-            Web Developer &amp; Designer
+            Web Developers &amp; Designers
             <br />
-            Based in Florida
+            in Orlando, Florida
           </h1>
         </section>
       </Parallax>
@@ -21,15 +26,16 @@ export default function Home({ content }) {
         <div className={styles.left}>
           <Fade opposite cascade>
             <div className={styles.strong}>
-              <span>Biography</span>
+              <span>Who we are</span>
               <p>
-                Freelance Web Developer based in Orlando Florida. Looking to
-                develop websites for clients directly or work with businesses to
-                assist with their projects. One stop shop for web development
-                and design.
+                If you need a new website or want to give your old one a
+                facelift, the team at AF. Designs can help. We are web design
+                and development professionals based in Florida, and we have a
+                passion for helping businesses succeed online. We will work with
+                you to understand your needs and develop a custom solution that
+                meets your goals and budget. Contact us today
               </p>
             </div>
-
             <div className={styles.strong}>
               <span>Contact</span>
               <p className={styles.contact}>
@@ -48,8 +54,13 @@ export default function Home({ content }) {
               <p>
                 Web Development
                 <br />
-                Web Design <br />
-                Web Animations
+                Web Design
+                <br />
+                SEO services
+                <br />
+                Branding
+                <br />
+                Marketing
               </p>
             </div>
           </Fade>
@@ -64,18 +75,18 @@ export default function Home({ content }) {
             <div className={styles.strong}>Client Satisfaction</div>
             <h2>100%</h2>
             <div className={styles.strong}>Number of Clients</div>
-            <h2>2</h2>
+            <h2>3</h2>
             <div className={styles.strong}>Projects Done</div>
             <h2>5</h2>
           </Fade>
         </div>
       </section>
-      <Parallax speed={-3}>
+      {/* <Parallax speed={-3}>
         <section className={styles.employer}>
-          <h3>Current Employer</h3>
+          <h3>Current Employers</h3>
           <div className={styles.row}>
             <a href="https://www.adventhealth.com">
-              <img
+              <Image
                 width={300}
                 height={105}
                 src="/adventhealth.svg"
@@ -84,11 +95,11 @@ export default function Home({ content }) {
             </a>
             <span>+</span>
             <a href="https://www.pushhere.com">
-              <img width={120} height={105} src="/push.svg" alt="push" />
+              <Image width={120} height={105} src="/push.svg" alt="push" />
             </a>
           </div>
         </section>
-      </Parallax>
+      </Parallax> */}
       <div className={styles.line}></div>
       <section className={styles.knowledge}>
         <h2 className={styles.heading}>My Knowledge</h2>

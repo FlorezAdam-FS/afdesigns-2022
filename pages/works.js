@@ -11,7 +11,7 @@ const works = () => {
 
   return (
     <div className={styles.works}>
-      <section>
+      <section style={{ maxWidth: 1600 }}>
         <h1>Portfolio</h1>
         <div className={styles.line}></div>
       </section>

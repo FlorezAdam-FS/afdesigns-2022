@@ -22,13 +22,14 @@ h2 {
 * {
   box-sizing: border-box;
   color: #1b1b1c;
+  cursor: none !important;
 }
 
 section {
   display: block;
-  max-width: 1600px;
   margin: 0 auto;
   width: 100%;
+  max-width: 1600px;
   padding: 4rem 0;
   @media screen and (max-width: $s) {
     padding: 2rem 0;

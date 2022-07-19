@@ -15,7 +15,7 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [project, setProject] = useState("");
   const [timeline, setTimeline] = useState("");
-  const [price, setPrice] = useState("$0 - $500");
+  const [price, setPrice] = useState("");
   const [success, setSuccess] = useState("");
 
   const handleSubmit = (e) => {
@@ -164,18 +164,16 @@ function Contact() {
             </div>
             <div className={styles.input}>
               <strong>06</strong>
+
               <div>
-                <p>What&apos;s Your budget?</p>
-                <select
+                <p>What&apos;s your Budget?</p>
+                <input
+                  type="number"
                   name="price"
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}
                   required
-                >
-                  <option value="$0 - $500">$0 - $500</option>
-                  <option value="$501 - $2500">$501 - $2500</option>
-                  <option value="$2501+">$2501+</option>
-                </select>
+                ></input>
               </div>
             </div>
             <div className={styles.buttonDiv}>

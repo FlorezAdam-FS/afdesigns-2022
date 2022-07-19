@@ -1,21 +1,47 @@
 @import "variables";
 
 .footer {
-  background: $dark;
+  background: $accent;
   cursor: url("../assets/images/Asset 11.png"), auto;
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 3rem;
+  .logo {
+    font-size: 6rem;
+  }
   a {
     font-size: 2rem;
     margin: 0 1rem;
+    color: $dark;
+    font-family: "Yellowtail";
+
     svg {
-      fill: $accent !important;
+      margin-top: 2rem;
+      fill: $dark !important;
+
       transition: 300ms ease-in;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-wrap: wrap;
+    h2 {
+      font-size: 2rem;
+      text-align: left;
+      margin-left: 3.2rem;
+      display: block;
+      width: 100%;
+    }
+    a {
+      font-family: "Cerebri Sans";
+      font-size: 1.3rem;
+      transition: 200ms ease-in;
       &:hover {
-        fill: rgb(185, 218, 185) !important;
+        color: #888;
       }
     }
   }
