@@ -19,29 +19,34 @@ const Nav = () => {
     <div className={styles.nav}>
       <ul className={styles.links}>
         <li>
-          <Link href="/works">
-            <a>WORKS</a>
+          <Link href="/projects">
+            <a>Projects</a>
           </Link>
         </li>
         <li>
           <Link href="/contact">
-            <a>CONTACT</a>
+            <a>Contact</a>
           </Link>
         </li>
         <li className={styles.services}>
           <Link href="/services">
-            <a onMouseEnter={showServices}>SERVICES</a>
+            <a onMouseEnter={showServices}>Services</a>
           </Link>
           {isHovered && (
             <div className={styles.hiddenNav} onMouseLeave={showServices}>
               <Link href="/services/web_design">
-                <a>WEB DESIGN</a>
+                <a>Web Design</a>
               </Link>
               <Link href="/services/seo_services">
-                <a>SEO SERVICES</a>
+                <a>SEO Services</a>
               </Link>
             </div>
           )}
+        </li>
+        <li>
+          <Link href="/blog">
+            <a>Blog</a>
+          </Link>
         </li>
       </ul>
 
