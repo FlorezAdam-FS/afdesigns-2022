@@ -34,9 +34,8 @@ const works = () => {
               </p>
               <div className={styles.links}>
                 <a target="_blank" rel="noreferrer" href={project.webLink}>Site</a>
-                <a target="_blank" rel="noreferrer" href={project.githubLink}>Github</a>
+                {project.githubLink ? (<a target="_blank" rel="noreferrer" href={project.githubLink}>Github</a>) : null}
               </div>
-              
             </div>
           ))}
         </div>
