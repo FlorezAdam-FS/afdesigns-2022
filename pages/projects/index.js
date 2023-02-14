@@ -33,8 +33,8 @@ const works = () => {
                 {project.desc}
               </p>
               <div className={styles.links}>
-                <a target="_blank" rel="noreferrer" src={project.webLink}>Site</a>
-                <a target="_blank" rel="noreferrer" src={project.githubLink}>Github</a>
+                <a target="_blank" rel="noreferrer" href={project.webLink}>Site</a>
+                <a target="_blank" rel="noreferrer" href={project.githubLink}>Github</a>
               </div>
               
             </div>
