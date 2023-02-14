@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/Link";
 import styles from "../../styles/Projects.module.scss";
-import { fetchAPI } from "../../lib/api";
 import { Projects 
 } from "../../data/projects";
 const works = () => {
@@ -17,7 +15,7 @@ const works = () => {
           {Projects.reverse().map((project) => (
             <div key={project.name} className={styles.gridItem}>
               <div className={styles.gridItemImage}>
-                <a target="_blank" href={project.webLink}>
+                <a target="_blank" rel="noreferrer" href={project.webLink}>
                   <Image
                     className={styles.gridItemImage}
                     src={project.image}
@@ -28,15 +26,15 @@ const works = () => {
                 </a>
               </div>
               <div className={styles.languages}>
-                {project.languages.map(l => <span className={styles.language}>{l}</span>)}
+                {project.languages.map(l => <span key={l} className={styles.language}>{l}</span>)}
               </div>
               <h3>{project.name}</h3>
               <p className={styles.gridItemDesc}>
                 {project.desc}
               </p>
               <div className={styles.links}>
-                <a target="_blank" src={project.webLink}>Site</a>
-                <a target="_blank" src={project.githubLink}>Github</a>
+                <a target="_blank" rel="noreferrer" src={project.webLink}>Site</a>
+                <a target="_blank" rel="noreferrer" src={project.githubLink}>Github</a>
               </div>
               
             </div>
