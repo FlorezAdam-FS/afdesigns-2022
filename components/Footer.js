@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/Footer.module.scss";
-import Link from "next/Link";
+import NextLink from "next/link";
 import {
   AiFillGithub,
   AiOutlineInstagram,
@@ -12,9 +12,9 @@ const Footer = () => {
     <div className={styles.footer}>
 
         <div>
-          <Link href="/">
+          <NextLink href="/">
             <a className={styles.logo}>af.</a>
-          </Link>
+          </NextLink>
         </div>
         <div className={styles.social}>
           <a href="https://github.com/FlorezAdam-FS">

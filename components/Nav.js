@@ -6,27 +6,27 @@ import {
   AiFillLinkedin,
 } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
-import Link from "next/link";
+import NextLink from "next/link";
 
 const Nav = () => {
   return (
     <div className={styles.nav}>
       <ul className={styles.links}>
         <li>
-          <Link href="/projects">
+          <NextLink href="/projects">
             <a>Projects</a>
-          </Link>
+          </NextLink>
         </li>
         <li>
-          <Link href="/contact">
+          <NextLink href="/contact">
             <a>Contact</a>
-          </Link>
+          </NextLink>
         </li>
       </ul>
 
-      <Link href="/">
+      <NextLink href="/">
         <a className={styles.logo}>af.</a>
-      </Link>
+      </NextLink>
 
       <div className={styles.social}>
         <a href="https://github.com/FlorezAdam-FS">
