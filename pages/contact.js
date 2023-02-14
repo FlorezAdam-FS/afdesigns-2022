@@ -78,7 +78,7 @@ function Contact() {
         <div className={styles.left}>
           <div>
             <strong>Address</strong>
-            <p>507 Pinnacle cove Blvd Orlando FL, 32824 United States</p>
+            <p>Winter Haven FL, 33881</p>
           </div>
           <div>
             <strong>Email</strong>
