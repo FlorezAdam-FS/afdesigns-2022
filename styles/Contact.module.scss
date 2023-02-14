@@ -144,11 +144,18 @@
           padding: 1.1rem 2rem 0 0;
         }
 
+        .textarea{
+          font-family: "Cerebri Sans";
+          font-weight: 300;
+          padding: 1rem;
+          margin-top: 1rem;
+        }
+
         div {
           flex: 1;
           font-size: 1.1rem;
           input,
-          select {
+          select, textarea {
             border: 0;
             border-bottom: 1px solid $brighter-accent;
             width: 100%;

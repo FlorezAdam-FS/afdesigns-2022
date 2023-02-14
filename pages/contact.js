@@ -95,7 +95,7 @@ function Contact() {
           </div>
         </div>
         <div className={styles.right}>
-          <strong>TELL US ABOUT YOUR PROJECT AND GOALS.</strong>
+          <strong>TELL US ABOUT YOUR PROJECT Or Job opportunities.</strong>
           <form onSubmit={(e) => handleSubmit(e)}>
             <div className={styles.input}>
               <strong>01</strong>
@@ -139,14 +139,15 @@ function Contact() {
             <div className={styles.input}>
               <strong>04</strong>
               <div>
-                <p>Tell me about your project.</p>
-                <input
+                <p>Tell me about your project or job opportunity.</p>
+                <textarea
                   type="text"
                   name="project"
                   value={project}
                   onChange={(e) => setProject(e.target.value)}
                   required
-                ></input>
+                  className={styles.textarea}
+                ></textarea>
               </div>
             </div>
             <div className={styles.input}>

@@ -10,7 +10,7 @@ import { FaFacebookF } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className={styles.footer}>
-      <div>
+
         <div>
           <Link href="/">
             <a className={styles.logo}>af.</a>
@@ -30,22 +30,9 @@ const Footer = () => {
             <FaFacebookF />
           </a>
         </div>
+        
       </div>
-      <div className={styles.right}>
-        <Link href="/services">
-          <h2>SERVICES</h2>
-        </Link>
-        <ul>
-          <Link href="/services/web_design">
-            <a>WEB DESIGN</a>
-          </Link>
 
-          <Link href="/services/seo_services">
-            <a>SEO SERVICES</a>
-          </Link>
-        </ul>
-      </div>
-    </div>
   );
 };
 

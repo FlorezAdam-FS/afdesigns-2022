@@ -42,6 +42,10 @@ export const FrontEnd = [
     name: "Vue",
     image: "/Vue.js_Logo_2.svg",
   },
+  {
+    name: "Python",
+    image: "/python-5.svg"
+  }
 ];
 
 export const BackEnd = [

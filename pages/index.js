@@ -4,6 +4,8 @@ import { Design, FrontEnd, BackEnd } from "../data/skills";
 import Image from "next/image";
 import { Parallax } from "react-scroll-parallax";
 import Fade from "react-reveal/Fade";
+import { currentEmployer } from "../data/employers";
+
 export default function Home({ content }) {
   return (
     <div className={styles.container}>
@@ -14,9 +16,9 @@ export default function Home({ content }) {
       <Parallax speed={-10}>
         <section className={styles.head}>
           <h1>
-            Af. Designs
+            Adam Florez
             <br />
-            Web Developers &amp; Designers
+            Web Developer &amp; Designer
             <br />
             in Orlando, Florida
           </h1>
@@ -26,14 +28,9 @@ export default function Home({ content }) {
         <div className={styles.left}>
           <Fade opposite cascade>
             <div className={styles.strong}>
-              <span>Who we are</span>
+              <span>Who am I?</span>
               <p>
-                If you need a new website or want to give your old one a
-                facelift, the team at AF. Designs can help. We are web design
-                and development professionals based in Florida, and we have a
-                passion for helping businesses succeed online. We will work with
-                you to understand your needs and develop a custom solution that
-                meets your goals and budget. Contact us today
+              Adam Florez is a talented and motivated web developer with a passion for creating visually appealing and user-friendly websites. With over a year of experience in the field, he has honed his skills and developed a keen eye for detail. He is committed to staying up-to-date with the latest industry trends and technologies, and is always seeking new opportunities to expand his knowledge and grow as a developer. In addition to his technical expertise, Adam is also a fast learner and a true team player. He excels in collaborative environments and is dedicated to ensuring that all projects are completed to the highest standards, both on time and within budget. With his positive attitude and strong work ethic, Adam is an asset to any team and is sure to bring success to any project he is involved in.
               </p>
             </div>
             <div className={styles.strong}>
@@ -46,6 +43,8 @@ export default function Home({ content }) {
                 </a>
                 <br />
                 407-932-8226
+                <br />
+                <a target="blank" href="https://www.linkedin.com/in/adamflorez">LinkedIn.com</a>
               </p>
             </div>
 
@@ -71,13 +70,22 @@ export default function Home({ content }) {
         <div className={styles.right}>
           <Fade opposite cascade>
             <div className={styles.strong}>Years Of Experience</div>
-            <h2>1.5</h2>
+            <h2>1</h2>
             <div className={styles.strong}>Client Satisfaction</div>
             <h2>100%</h2>
             <div className={styles.strong}>Number of Clients</div>
             <h2>3</h2>
             <div className={styles.strong}>Projects Done</div>
             <h2>5</h2>
+            <div className={styles.strong}>Current Employer</div>
+            <div className={styles.margin}>
+            <Image
+              src={currentEmployer.image}
+              height={80}
+              width={240}
+              alt={currentEmployer.name}
+            />
+            </div>
           </Fade>
         </div>
       </section>
@@ -201,7 +209,7 @@ export async function getStaticProps() {
   const res = await fetch(RSSConverter);
   const data = await res.json();
   const items = data.items.slice(0, 3);
-
+  console.log(data)
   return {
     props: {
       content: items,

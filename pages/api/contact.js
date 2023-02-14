@@ -4,7 +4,7 @@ export default function Contact(req, res) {
 
   const transporter = nodemailer.createTransport({
     port: 465,
-    host: "smtp.gmail.com",
+    service: "gmail",
     auth: {
       user: process.env.EMAIL,
       pass: process.env.EMAIL_PASSWORD,
@@ -15,7 +15,7 @@ export default function Contact(req, res) {
   const myMailData = {
     from: req.body.email,
     to: process.env.EMAIL,
-    subject: `Message From ${req.body.name}`,
+    subject: `🥳 YOU GOT A MESSAGE FROM ${req.body.name} ‼️`,
     text: req.body.message + " | Sent from: " + req.body.email,
     html: `
     <div>

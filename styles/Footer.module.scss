@@ -5,10 +5,10 @@
   cursor: url("../assets/images/Asset 11.png"), auto;
   width: 100%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
 
-  padding: 3rem;
+  padding: 1rem 3rem;
   .logo {
     font-size: 6rem;
   }
@@ -21,28 +21,8 @@
     svg {
       margin-top: 2rem;
       fill: $dark !important;
-
       transition: 300ms ease-in;
     }
   }
-
-  .right {
-    display: flex;
-    flex-wrap: wrap;
-    h2 {
-      font-size: 2rem;
-      text-align: left;
-      margin-left: 3.2rem;
-      display: block;
-      width: 100%;
-    }
-    a {
-      font-family: "Cerebri Sans";
-      font-size: 1.3rem;
-      transition: 200ms ease-in;
-      &:hover {
-        color: #888;
-      }
-    }
-  }
+  
 }

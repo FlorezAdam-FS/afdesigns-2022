@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "../styles/Nav.module.scss";
 import {
   AiFillGithub,
@@ -9,12 +9,6 @@ import { FaFacebookF } from "react-icons/fa";
 import Link from "next/link";
 
 const Nav = () => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const showServices = () => {
-    setIsHovered((prev) => !prev);
-  };
-
   return (
     <div className={styles.nav}>
       <ul className={styles.links}>
@@ -26,26 +20,6 @@ const Nav = () => {
         <li>
           <Link href="/contact">
             <a>Contact</a>
-          </Link>
-        </li>
-        <li className={styles.services}>
-          <Link href="/services">
-            <a onMouseEnter={showServices}>Services</a>
-          </Link>
-          {isHovered && (
-            <div className={styles.hiddenNav} onMouseLeave={showServices}>
-              <Link href="/services/web_design">
-                <a>Web Design</a>
-              </Link>
-              <Link href="/services/seo_services">
-                <a>SEO Services</a>
-              </Link>
-            </div>
-          )}
-        </li>
-        <li>
-          <Link href="/blog">
-            <a>Blog</a>
           </Link>
         </li>
       </ul>

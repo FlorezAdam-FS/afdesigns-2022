@@ -24,13 +24,24 @@
     flex-wrap: wrap;
     max-width: 1600px;
     margin: 0 auto;
-
+    
     .links {
-      font-size: 2.2rem;
+      font-size: 1rem;
       margin-bottom: -0.8rem;
-
+      margin-left: auto;
+      margin-right: 1rem;
       a {
         margin-left: 1rem;
+        padding: .3rem 1rem;
+        border: 2px solid $brighter-accent;
+        font-family: Cerebri Sans;
+        font-weight: 100px;
+        border-radius: 2rem;
+        transition: 400ms all ease;
+        &:hover{
+          background: $brighter-accent;
+          color: white;
+        }
         @media screen and (max-width: $s) {
           margin-left: 0;
           margin-right: 1rem;
@@ -46,8 +57,11 @@
     }
 
     .gridItem {
-      max-width: 800px;
-      width: 100%;
+      max-width: 750px;
+      width: 50%;
+      @media screen and (max-width: 649px) {
+        width: 100%;
+      }
       justify-content: space-between;
       align-items: flex-start;
       display: flex;
@@ -61,22 +75,27 @@
         background-color: $brighter-accent;
       }
       .gridItemDesc {
-        width: 80%;
+        width: 90%;
         font-family: "Cerebri Sans";
         line-height: 1.4;
+        padding-left: 1rem;
+        font-size: 1rem;
       }
       .languages {
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        margin-left: 1rem;
+        margin-top: 1rem;
         @media screen and (max-width: $s) {
           margin-bottom: 1rem;
         }
+
         .language {
           margin-right: 1rem;
           padding: 0.5rem 0.8rem;
-          background: #aaa;
-          color: #444;
+          background: #c9d1c3;
+          color: white;
           border-radius: 2rem;
           font-family: "Cerebri Sans", sans-serif;
           font-weight: 300;
@@ -86,7 +105,7 @@
       .gridItemImage {
         max-width: 750px;
         width: 100%;
-        height: 750px;
+        max-height: 750px;
         position: relative;
         overflow: hidden;
 
@@ -112,11 +131,15 @@
       }
 
       h3 {
-        font-size: 3rem;
-        margin-top: 0rem;
+        font-size: 5vw;
+        margin-top: 1rem;
+        line-height: 4.5vw;
         font-family: "Amiri";
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
+        padding-left: 1rem;
       }
+
+     
     }
   }
 }
@@ -128,3 +151,5 @@
   background-color: $dark;
   margin: 2rem auto;
 }
+
+
