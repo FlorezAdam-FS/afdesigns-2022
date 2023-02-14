@@ -1,5 +1,5 @@
 import styles from "../styles/Home.module.scss";
-import Head from "next/Head";
+import Head from "next/head";
 import { Design, FrontEnd, BackEnd } from "../data/skills";
 import Image from "next/image";
 import { Parallax } from "react-scroll-parallax";
