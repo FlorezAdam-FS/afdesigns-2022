@@ -29,16 +29,16 @@ const Nav = () => {
       </NextLink>
 
       <div className={styles.social}>
-        <a href="https://github.com/FlorezAdam-FS">
+        <a href="https://github.com/FlorezAdam-FS" target="_blank" rel='noreferrer'>
           <AiFillGithub className={styles.socialItem} />
         </a>
-        <a href="https://www.linkedin.com/in/adamflorez/">
+        <a href="https://www.linkedin.com/in/adamflorez/" target="_blank" rel='noreferrer'>
           <AiFillLinkedin className={styles.socialItem} />
         </a>
-        <a href="https://instagram.com/adamflorezdesigns">
+        <a href="https://instagram.com/adamflorezdesigns" target="_blank" rel='noreferrer'>
           <AiOutlineInstagram className={styles.socialItem} />
         </a>
-        <a href="https://www.facebook.com/adamflorezdesigns">
+        <a href="https://www.facebook.com/adamflorezdesigns" target="_blank" rel='noreferrer'>
           <FaFacebookF className={styles.socialItem} />
         </a>
       </div>

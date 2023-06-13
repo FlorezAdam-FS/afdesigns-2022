@@ -11,10 +11,15 @@
 .contact {
   margin-bottom: 3rem;
   .intro {
-    max-width: 1600px;
-    padding: 1rem;
-    @media screen and (max-width: $s) {
-    }
+    display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
+  padding: 4rem;
+  @media screen and (max-width: $s) {
+    padding: 2rem 0;
+  }
+
     h1 {
       font-family: "Cerebri Sans";
       font-weight: 700;
@@ -65,7 +70,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 1rem;
+    padding: 0 4rem;
 
     @media screen and (max-width: $m) {
       flex-direction: column;

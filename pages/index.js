@@ -10,17 +10,22 @@ export default function Home({ content }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>af. designs | Orlando Creative Developer</title>
-        <meta />
+        <title>
+          Software Developer Florida | Custom Web Development Services
+        </title>
+        <meta
+          name='description'
+          content='Professional software developer in Florida. Custom web development services, specializing in responsive and SEO-friendly websites. Contact me today!'
+        />
       </Head>
       <Parallax speed={-10}>
         <section className={styles.head}>
           <h1>
             Adam Florez
             <br />
-            Web Developer &amp; Designer
+            Talented Software Developer in Florida
             <br />
-            in Orlando, Florida
+            User-Friendly Applications
           </h1>
         </section>
       </Parallax>
@@ -30,7 +35,19 @@ export default function Home({ content }) {
             <div className={styles.strong}>
               <span>Who am I?</span>
               <p>
-              Adam Florez is a talented and motivated web developer with a passion for creating visually appealing and user-friendly websites. With over a year of experience in the field, he has honed his skills and developed a keen eye for detail. He is committed to staying up-to-date with the latest industry trends and technologies, and is always seeking new opportunities to expand his knowledge and grow as a developer. In addition to his technical expertise, Adam is also a fast learner and a true team player. He excels in collaborative environments and is dedicated to ensuring that all projects are completed to the highest standards, both on time and within budget. With his positive attitude and strong work ethic, Adam is an asset to any team and is sure to bring success to any project he is involved in.
+                Adam Florez is a talented and motivated web developer with a
+                passion for creating visually appealing and user-friendly
+                websites. With over a year of experience in the field, he has
+                honed his skills and developed a keen eye for detail. He is
+                committed to staying up-to-date with the latest industry trends
+                and technologies, and is always seeking new opportunities to
+                expand his knowledge and grow as a developer. In addition to his
+                technical expertise, Adam is also a fast learner and a true team
+                player. He excels in collaborative environments and is dedicated
+                to ensuring that all projects are completed to the highest
+                standards, both on time and within budget. With his positive
+                attitude and strong work ethic, Adam is an asset to any team and
+                is sure to bring success to any project he is involved in.
               </p>
             </div>
             <div className={styles.strong}>
@@ -38,13 +55,15 @@ export default function Home({ content }) {
               <p className={styles.contact}>
                 Adam Florez
                 <br />
-                <a target="blank" href="mailto: adamseanflorez@gmail.com">
+                <a target='blank' href='mailto: adamseanflorez@gmail.com'>
                   adam@adamflorezdesigns.com
                 </a>
                 <br />
                 407-932-8226
                 <br />
-                <a target="blank" href="https://www.linkedin.com/in/adamflorez">LinkedIn.com</a>
+                <a target='blank' href='https://www.linkedin.com/in/adamflorez'>
+                  LinkedIn.com
+                </a>
               </p>
             </div>
 
@@ -79,12 +98,14 @@ export default function Home({ content }) {
             <h2>5</h2>
             <div className={styles.strong}>Current Employer</div>
             <div className={styles.margin}>
-            <Image
-              src={currentEmployer.image}
-              height={80}
-              width={240}
-              alt={currentEmployer.name}
-            />
+              <a href='https://www.gcomsoft.com/' alt="GCOM Software, LLC" target="_blank" rel="noreferrer">
+                <Image
+                  src={currentEmployer.image}
+                  height={80}
+                  width={240}
+                  alt={currentEmployer.name}
+                />
+              </a>
             </div>
           </Fade>
         </div>
@@ -121,8 +142,8 @@ export default function Home({ content }) {
                     <div className={styles.logoImage}>
                       <Image
                         src={design.image}
-                        height={80}
-                        width="100%"
+                        height={40}
+                        width='100%'
                         alt={design.name}
                       />
                     </div>
@@ -143,8 +164,8 @@ export default function Home({ content }) {
                     <div className={styles.logoImage}>
                       <Image
                         src={dev.image}
-                        height={80}
-                        width="100%"
+                        height={40}
+                        width='100%'
                         alt={dev.name}
                       />
                     </div>
@@ -165,8 +186,8 @@ export default function Home({ content }) {
                     <div className={styles.logoImage}>
                       <Image
                         src={dev.image}
-                        height={80}
-                        width="100%"
+                        height={40}
+                        width='100%'
                         alt={dev.name}
                       />
                     </div>
@@ -185,7 +206,7 @@ export default function Home({ content }) {
         <div className={styles.row}>
           {content.map((item) => (
             <a
-              target="blank"
+              target='blank'
               style={{
                 background: `linear-gradient(#00000020, #00000099),url(${item.thumbnail}) center center / cover no-repeat`,
               }}

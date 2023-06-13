@@ -10,9 +10,8 @@ const works = () => {
         <h1>Portfolio</h1>
         <div className={styles.line}></div>
       </section>
-      <section>
         <div className={styles.grid}>
-          {Projects.reverse().map((project) => (
+          {Projects.map((project) => (
             <div key={project.name} className={styles.gridItem}>
               <div className={styles.gridItemImage}>
                 <a target="_blank" rel="noreferrer" href={project.webLink}>
@@ -39,10 +38,8 @@ const works = () => {
             </div>
           ))}
         </div>
-      </section>
     </div>
   );
 };
 
 export default works;
-

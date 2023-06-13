@@ -57,7 +57,8 @@ function Contact() {
     <div className={styles.contact}>
       <Parallax speed={-3}>
         <section className={styles.intro}>
-          <h1>Let&apos;s get you an estimate.</h1>
+          <h1>Let&apos;s get in touch.</h1>
+          <div className={styles.line}></div>
           <div className={styles.social}>
             <a href="https://github.com/FlorezAdam-FS">
               <AiFillGithub />
@@ -83,8 +84,8 @@ function Contact() {
           <div>
             <strong>Email</strong>
             <p className={styles.contact}>
-              <a target="blank" href="mailto: adam@adamflorezdesigns.com">
-                adam@adamflorezdesigns.com
+              <a target="blank" href="mailto: adamseanflorez@gmail.com">
+                adamseanflorez@gmail.com
               </a>
             </p>
           </div>
@@ -95,7 +96,7 @@ function Contact() {
           </div>
         </div>
         <div className={styles.right}>
-          <strong>TELL US ABOUT YOUR PROJECT Or Job opportunities.</strong>
+          <strong>Tell me about your project or job opportunity.</strong>
           <form onSubmit={(e) => handleSubmit(e)}>
             <div className={styles.input}>
               <strong>01</strong>
@@ -159,20 +160,6 @@ function Contact() {
                   name="timeline"
                   value={timeline}
                   onChange={(e) => setTimeline(e.target.value)}
-                  required
-                ></input>
-              </div>
-            </div>
-            <div className={styles.input}>
-              <strong>06</strong>
-
-              <div>
-                <p>What&apos;s your Budget?</p>
-                <input
-                  type="number"
-                  name="price"
-                  value={price}
-                  onChange={(e) => setPrice(e.target.value)}
                   required
                 ></input>
               </div>

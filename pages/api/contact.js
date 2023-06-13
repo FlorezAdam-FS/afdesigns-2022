@@ -24,7 +24,6 @@ export default function Contact(req, res) {
       <p>Email: ${req.body.email}</p>
       <p>Project: ${req.body.project}</p>
       <p>Timeline: ${req.body.timeline}</p>
-      <p>Budget: $${req.body.price}.00</p>
     </div>
     `,
   };

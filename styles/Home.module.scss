@@ -10,14 +10,27 @@
 .container {
   width: 100%;
   h1 {
+    font-size: 4rem;
     animation: text-focus-in 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  }
+
+  @media screen and (max-width: $l){
+    h1 {
+      font-size: 3.8rem;
+    }
+  }
+
+  @media screen and (max-width: $m){
+    h1 {
+      font-size: 3.4rem;
+    }
   }
   @media screen and(max-width: $s) {
     section {
       padding: 2rem 0;
     }
     h1 {
-      font-size: 3.4rem;
+      font-size: 2.8rem;
       padding: 1rem;
     }
 
@@ -173,15 +186,15 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     justify-content: flex-start;
     padding: 0;
     margin:0 auto;
 
     .categoryContainer {
       transition: all 200ms ease-in;
-      width: 800px;
-      max-width: max-content;
+      width: 100%;
       padding: 1rem;
       h3 {
         font-family: "Cerebri Sans";
@@ -196,10 +209,9 @@
       }
 
       .categories {
-        min-width: 800px;
         border-radius: 10px;
+        width: 100%;
         margin: 0 auto;
-        overflow-x: scroll;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -211,7 +223,6 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 1rem;
         }
 
         .item {
@@ -219,18 +230,24 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          justify-content: space-around;
-          height: 140px;
+          justify-content: center;
+          height: 100px;
           width: 100%;
-
+          
           .logoImage {
             filter: grayscale(1);
             transition: all 100ms ease-in;
             padding: 0.1rem;
+            
+
+            img{
+              margin: 0 auto;
+            }
             &:hover {
               filter: grayscale(0);
               animation: jump 600ms forwards;
             }
+            
           }
 
           p {
@@ -238,8 +255,7 @@
             margin: 0;
             color: black;
             font-family: "Amiri";
-            font-size: 1.3rem;
-            line-height: 1;
+            font-size: 1rem;
           }
         }
       }
@@ -247,6 +263,7 @@
   }
 
   .recentPosts {
+    padding: 4rem 0;
     text-align: center;
     display: flex;
     align-items: center;
@@ -259,7 +276,12 @@
     }
     .row {
       gap: 2rem;
-      width: 900px;
+      width: 1000px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      @media (max-width: 1000px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
 
     .link {
@@ -273,6 +295,7 @@
       justify-content: flex-end;
       transform-origin: center;
       transition: 300ms ease-in;
+      margin: 0 auto;
       &:hover {
         transform: scale(1.1);
       }
@@ -303,16 +326,16 @@
     transform: translateY(0);
   }
   20% {
-    transform: translateY(10px);
+    transform: translateY(8px);
   }
   40% {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
   }
   60% {
-    transform: translateY(6px);
+    transform: translateY(4px);
   }
   80% {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
   }
   100% {
     transform: translateY(0);

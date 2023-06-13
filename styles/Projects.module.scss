@@ -18,13 +18,13 @@
   }
 
   .grid {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin: 0 auto;
-    
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 4rem;
+  gap: 1rem;
     .links {
       font-size: 1rem;
       margin-bottom: -0.8rem;
@@ -33,6 +33,7 @@
       a {
         margin-left: 1rem;
         padding: .3rem 1rem;
+        width: 100%;
         border: 2px solid $brighter-accent;
         font-family: Cerebri Sans;
         font-weight: 100px;
@@ -58,7 +59,6 @@
 
     .gridItem {
       max-width: 750px;
-      width: 50%;
       @media screen and (max-width: 649px) {
         width: 100%;
       }
@@ -138,8 +138,6 @@
         margin-bottom: 0rem;
         padding-left: 1rem;
       }
-
-     
     }
   }
 }
@@ -149,7 +147,7 @@
   max-width: 1600px;
   height: 2px;
   background-color: $dark;
-  margin: 2rem auto;
+  margin: 2rem auto 0rem;
 }
 
 
