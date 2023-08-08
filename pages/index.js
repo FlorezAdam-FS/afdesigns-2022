@@ -1,10 +1,10 @@
-import styles from "../styles/Home.module.scss";
-import Head from "next/head";
-import { Design, FrontEnd, BackEnd } from "../data/skills";
-import Image from "next/image";
-import { Parallax } from "react-scroll-parallax";
-import Fade from "react-reveal/Fade";
-import { currentEmployer } from "../data/employers";
+import styles from '../styles/Home.module.scss';
+import Head from 'next/head';
+import { Design, FrontEnd, BackEnd } from '../data/skills';
+import Image from 'next/image';
+import { Parallax } from 'react-scroll-parallax';
+import Fade from 'react-reveal/Fade';
+import { currentEmployer } from '../data/employers';
 
 export default function Home({ content }) {
   return (
@@ -20,13 +20,14 @@ export default function Home({ content }) {
       </Head>
       <Parallax speed={-10}>
         <section className={styles.head}>
-          <h1>
+          <h1>orlando web designer</h1>
+          <h2 className={styles.displayText}>
             Adam Florez
             <br />
             Talented Software Developer in Florida
             <br />
             User-Friendly Applications
-          </h1>
+          </h2>
         </section>
       </Parallax>
       <section className={styles.details}>
@@ -98,7 +99,12 @@ export default function Home({ content }) {
             <h2>5</h2>
             <div className={styles.strong}>Current Employer</div>
             <div className={styles.margin}>
-              <a href='https://www.gcomsoft.com/' alt="GCOM Software, LLC" target="_blank" rel="noreferrer">
+              <a
+                href='https://www.gcomsoft.com/'
+                alt='GCOM Software, LLC'
+                target='_blank'
+                rel='noreferrer'
+              >
                 <Image
                   src={currentEmployer.image}
                   height={80}
@@ -224,16 +230,10 @@ export default function Home({ content }) {
 }
 
 export async function getStaticProps() {
-  const username = "adamseanflorez";
+  const username = 'adamseanflorez';
   const RSSURL = `https://medium.com/feed/@${username}`;
   const RSSConverter = `https://api.rss2json.com/v1/api.json?rss_url=${RSSURL}`;
-  const res = await fetch(RSSConverter);
-  const data = await res.json();
-  const items = data.items.slice(0, 4);
-  
-  return {
-    props: {
-      content: items,
-    },
-  };
+  const { items } = await (await fetch(RSSConverter)).json();
+
+  return { props: { content: items.slice(0, 4) } };
 }

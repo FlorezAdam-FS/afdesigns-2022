@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 
 .line {
   width: 100%;
@@ -10,18 +10,27 @@
 .container {
   width: 100%;
   h1 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Cerebri Sans';
+    text-transform: uppercase;
+    color: $brighter-accent;
+  }
+  .displayText {
     font-size: 4rem;
+    line-height: 1;
+    margin-top: 1rem;
     animation: text-focus-in 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   }
 
-  @media screen and (max-width: $l){
-    h1 {
+  @media screen and (max-width: $l) {
+    .displayText {
       font-size: 3.8rem;
     }
   }
 
-  @media screen and (max-width: $m){
-    h1 {
+  @media screen and (max-width: $m) {
+    .displayText {
       font-size: 3.4rem;
     }
   }
@@ -29,7 +38,7 @@
     section {
       padding: 2rem 0;
     }
-    h1 {
+    h2 {
       font-size: 2.8rem;
       padding: 1rem;
     }
@@ -48,7 +57,7 @@
       justify-content: center;
     }
     .strong span {
-      font-family: "Cerebri Sans";
+      font-family: 'Cerebri Sans';
       font-weight: 300;
       color: $brighter-accent;
       text-transform: uppercase;
@@ -56,14 +65,14 @@
     @media screen and (max-width: $xl) {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-areas: "me me" "info number";
+      grid-template-areas: 'me me' 'info number';
       gap: 3rem;
     }
 
     @media screen and (max-width: $s) {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-areas: "me" "info" "number";
+      grid-template-areas: 'me' 'info' 'number';
       gap: 3rem;
     }
 
@@ -77,7 +86,7 @@
       height: 100%;
 
       p {
-        font-family: "Amiri";
+        font-family: 'Amiri';
         line-height: 1.2;
         font-size: 1.1rem;
         margin-bottom: 4rem;
@@ -101,7 +110,7 @@
       flex: 1;
       aspect-ratio: 1/2;
       min-width: 360px;
-      background: url("/me.png");
+      background: url('/me.webp');
       background-size: cover;
       background-position: center 60px;
       background-repeat: no-repeat;
@@ -112,7 +121,7 @@
         margin: 0 auto;
       }
       &::before {
-        content: "";
+        content: '';
         height: 104%;
         width: 110%;
         border-radius: 270px;
@@ -160,7 +169,7 @@
       }
     }
     h3 {
-      font-family: "Cerebri Sans";
+      font-family: 'Cerebri Sans';
       font-weight: 300;
       color: lightgray;
       text-transform: uppercase;
@@ -190,14 +199,14 @@
     max-width: 800px;
     justify-content: flex-start;
     padding: 0;
-    margin:0 auto;
+    margin: 0 auto;
 
     .categoryContainer {
       transition: all 200ms ease-in;
       width: 100%;
       padding: 1rem;
       h3 {
-        font-family: "Cerebri Sans";
+        font-family: 'Cerebri Sans';
         font-weight: 400;
       }
       &:hover > h3 {
@@ -233,28 +242,26 @@
           justify-content: center;
           height: 100px;
           width: 100%;
-          
+
           .logoImage {
             filter: grayscale(1);
             transition: all 100ms ease-in;
             padding: 0.1rem;
-            
 
-            img{
+            img {
               margin: 0 auto;
             }
             &:hover {
               filter: grayscale(0);
               animation: jump 600ms forwards;
             }
-            
           }
 
           p {
             padding: 0;
             margin: 0;
             color: black;
-            font-family: "Amiri";
+            font-family: 'Amiri';
             font-size: 1rem;
           }
         }
@@ -287,7 +294,7 @@
     .link {
       height: 250px;
       width: 400px;
-      font-family: "Cerebri Sans";
+      font-family: 'Cerebri Sans';
       border-radius: 10px;
       padding: 0rem 2rem;
       display: flex;
@@ -362,6 +369,6 @@
   }
 }
 
-.margin{
+.margin {
   margin-top: 2rem;
 }

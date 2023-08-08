@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Yellowtail&display=swap");
-@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Yellowtail&display=swap');
+@import 'variables';
 
 html,
 body {
@@ -12,7 +12,7 @@ a {
 }
 
 h2 {
-  font-family: "Amiri";
+  font-family: 'Amiri';
   font-size: 5rem;
   line-height: 0;
   font-weight: 300;
@@ -37,7 +37,7 @@ section {
 }
 
 h1 {
-  font-family: "Amiri";
+  font-family: 'Amiri';
   font-size: 5rem;
   line-height: 1.1;
   font-weight: 300;
@@ -45,31 +45,36 @@ h1 {
 }
 
 @font-face {
-  font-family: "Cerebri Sans";
-  src: url("../assets/fonts/Cerebri\ Sans\ Book.ttf");
+  font-family: 'Cerebri Sans';
+  src: url('../assets/fonts/Cerebri\ Sans\ Book.ttf');
   font-weight: 300;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Cerebri Sans";
-  src: url("../assets/fonts/Cerebri\ Sans\ SemiBold.ttf");
+  font-family: 'Cerebri Sans';
+  src: url('../assets/fonts/Cerebri\ Sans\ SemiBold.ttf');
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Cerebri Sans";
-  src: url("../assets/fonts/Cerebri\ Sans\ Bold.ttf");
+  font-family: 'Cerebri Sans';
+  src: url('../assets/fonts/Cerebri\ Sans\ Bold.ttf');
   font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Cerebri Sans";
-  src: url("../assets/fonts/Cerebri\ Sans\ ExtraBold.ttf");
+  font-family: 'Cerebri Sans';
+  src: url('../assets/fonts/Cerebri\ Sans\ ExtraBold.ttf');
   font-weight: 600;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Cerebri Sans";
-  src: url("../assets/fonts/Cerebri\ Sans\ Heavy.ttf");
+  font-family: 'Cerebri Sans';
+  src: url('../assets/fonts/Cerebri\ Sans\ Heavy.ttf');
   font-weight: 700;
+  font-display: swap;
 }
